@@ -1,0 +1,109 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #0f172a;
+  background: #e9f3ee;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+
+body {
+  margin: 0;
+  min-width: 320px;
+  background:
+    radial-gradient(circle at top, rgba(10, 207, 131, 0.18), transparent 30%),
+    #e9f3ee;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.field {
+  width: 100%;
+  border: 1px solid #d8e7de;
+  background: #f8fcf9;
+  border-radius: 18px;
+  padding: 0.9rem 1rem;
+  font: inherit;
+  color: #0f172a;
+}
+
+.field:focus {
+  outline: 2px solid rgba(10, 207, 131, 0.2);
+  border-color: #0acf83;
+}
+
+.hb-loader-pattern {
+  background-image:
+    repeating-linear-gradient(
+      135deg,
+      transparent 0,
+      transparent 52px,
+      rgba(10, 207, 131, 0.35) 52px,
+      rgba(10, 207, 131, 0.35) 56px,
+      transparent 56px,
+      transparent 108px
+    );
+  position: relative;
+}
+
+.hb-loader-pattern::before {
+  content: 'HB HB HB HB HB HB HB HB HB HB HB HB';
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  font-size: clamp(2.4rem, 8vw, 5rem);
+  font-weight: 800;
+  letter-spacing: 0.35em;
+  color: rgba(10, 207, 131, 0.4);
+  transform: rotate(-18deg) scale(1.2);
+  white-space: pre-wrap;
+  line-height: 1.8;
+}
+
+.hb-loader-spin {
+  animation: hb-spin 1.8s linear infinite;
+}
+
+.hb-loader-dot {
+  width: 0.6rem;
+  height: 0.6rem;
+  border-radius: 9999px;
+  background: #0acf83;
+  animation: hb-bounce 1.2s infinite ease-in-out;
+}
+
+.hb-loader-dot-delay-1 {
+  animation-delay: 0.15s;
+}
+
+.hb-loader-dot-delay-2 {
+  animation-delay: 0.3s;
+}
+
+@keyframes hb-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes hb-bounce {
+  0%,
+  80%,
+  100% {
+    transform: scale(0.7);
+    opacity: 0.45;
+  }
+  40% {
+    transform: scale(1.05);
+    opacity: 1;
+  }
+}
