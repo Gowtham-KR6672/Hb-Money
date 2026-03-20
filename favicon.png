@@ -1,0 +1,31 @@
+import{c,j as e,r}from"./index-BS8Aq4EG.js";/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const M=[["path",{d:"M17 7 7 17",key:"15tmo1"}],["path",{d:"M17 17H7V7",key:"1org7z"}]],g=c("arrow-down-left",M);/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const z=[["path",{d:"M7 7h10v10",key:"1tivn9"}],["path",{d:"M7 17 17 7",key:"1vkiza"}]],S=c("arrow-up-right",z);/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const _=[["rect",{width:"20",height:"12",x:"2",y:"6",rx:"2",key:"9lu3g6"}],["circle",{cx:"12",cy:"12",r:"2",key:"1c9p78"}],["path",{d:"M6 12h.01M18 12h.01",key:"113zkx"}]],T=c("banknote",_);/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const $=[["path",{d:"M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z",key:"1a8usu"}],["path",{d:"m15 5 4 4",key:"1mk7zo"}]],y=c("pencil",$);/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const C=[["circle",{cx:"8",cy:"21",r:"1",key:"jimo8o"}],["circle",{cx:"19",cy:"21",r:"1",key:"13723u"}],["path",{d:"M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12",key:"9zh506"}]],X=c("shopping-cart",C);/**
+ * @license lucide-react v0.511.0 - ISC
+ *
+ * This source code is licensed under the ISC license.
+ * See the LICENSE file in the root directory of this source tree.
+ */const L=[["path",{d:"M3 6h18",key:"d0wm0j"}],["path",{d:"M19 6v14c0 1-1 2-2 2H7c-1 0-2-1-2-2V6",key:"4alrt4"}],["path",{d:"M8 6V4c0-1 1-2 2-2h4c1 0 2 1 2 2v2",key:"v07s0e"}],["line",{x1:"10",x2:"10",y1:"11",y2:"17",key:"1uufr5"}],["line",{x1:"14",x2:"14",y1:"11",y2:"17",key:"xtxkd"}]],f=c("trash-2",L),A={Salary:T,Groceries:X,Rent:g};function H({transaction:t,onEdit:s,onDelete:n}){const[i,a]=r.useState(0),[d,h]=r.useState(null),[b,j]=r.useState(!1),[x,u]=r.useState(!1),w=A[t.title]||(t.type==="income"?S:g),o=!!(s||n);function k(l){o&&h(l.touches[0].clientX)}function v(l){if(!o||d===null)return;const m=l.touches[0].clientX-d;m<0&&a(Math.max(m,-112))}function p(){o&&(j(i<=-40),a(0),h(null))}const N=x||b?-116:i;return e.jsxs("article",{className:"group relative overflow-hidden rounded-card shadow-panel",onMouseEnter:()=>o&&u(!0),onMouseLeave:()=>u(!1),children:[o?e.jsxs("div",{className:`absolute inset-y-0 right-0 z-0 hidden w-28 items-center justify-center gap-2 bg-slate-100 px-3 transition-opacity duration-200 md:flex ${x?"opacity-100":"opacity-0"}`,children:[s?e.jsx("button",{type:"button",onClick:()=>s(t),className:"rounded-2xl bg-white p-3 text-brand-700 shadow-soft transition hover:bg-brand hover:text-white",children:e.jsx(y,{size:18})}):null,n?e.jsx("button",{type:"button",onClick:()=>n(t),className:"rounded-2xl bg-white p-3 text-expense shadow-soft transition hover:bg-expense hover:text-white",children:e.jsx(f,{size:18})}):null]}):null,o?e.jsxs("div",{className:"absolute inset-y-0 right-0 z-0 flex w-28 items-center justify-center gap-2 bg-slate-100 px-3 md:hidden",children:[s?e.jsx("button",{type:"button",onClick:()=>s(t),className:"rounded-2xl bg-white p-3 text-brand-700 shadow-soft",children:e.jsx(y,{size:18})}):null,n?e.jsx("button",{type:"button",onClick:()=>n(t),className:"rounded-2xl bg-white p-3 text-expense shadow-soft",children:e.jsx(f,{size:18})}):null]}):null,e.jsxs("div",{className:"relative z-10 grid grid-cols-[52px,1fr,auto] items-center gap-3 rounded-card bg-white p-4 transition-transform duration-200 will-change-transform",style:{transform:`translateX(${N}px)`,touchAction:"pan-y"},onTouchStart:k,onTouchMove:v,onTouchEnd:p,onTouchCancel:p,children:[e.jsx("div",{className:`grid h-12 w-12 place-items-center rounded-2xl ${t.type==="income"?"bg-brand/15 text-brand-500":"bg-blue-50 text-expense"}`,children:e.jsx(w,{size:20})}),e.jsxs("div",{children:[e.jsx("p",{className:"font-semibold text-ink",children:t.title}),e.jsx("p",{className:"text-xs text-slateSoft",children:t.time})]}),e.jsxs("div",{className:"text-right",children:[e.jsx("p",{className:"text-xs text-slateSoft",children:t.category}),e.jsx("p",{className:`mt-1 font-semibold ${t.type==="income"?"text-income":"text-expense"}`,children:t.amount})]})]})]})}function I({transactions:t,emptyMessage:s="No transactions found yet.",onEdit:n,onDelete:i}){return t.length?e.jsx("section",{className:"space-y-3 px-4 pb-28",children:t.map(a=>e.jsx(H,{transaction:a,onEdit:n,onDelete:i},a.id))}):e.jsx("section",{className:"px-4 pb-28",children:e.jsx("div",{className:"rounded-card bg-white p-6 text-center text-sm text-slateSoft shadow-panel",children:s})})}export{I as T};
